@@ -34,7 +34,7 @@ fn main() {
     println!("Percentage: {:.2}%", total_otc_percentage);
     println!("SSwitching to July.");
     total_otc_count = 0; total_otc_count = 0; otc_count = 0; no_otc_count = 0;
-
+    iteration = 0;
     for filename in j {
         let url = format!("{}{}", base_url_rib_july, filename);
         for elem in BgpkitParser::new(&url).unwrap() {
@@ -47,7 +47,7 @@ fn main() {
             }
         }
         iteration += 1;
-        println!("Done with {}/{} iterations. ", iteration, a.len());
+        println!("Done with {}/{} iterations. ", iteration, j.len());
         otc_count = 0;
         no_otc_count = 0;
     }
