@@ -36,6 +36,8 @@ fn main() {
     let total_count = total_otc_count + total_no_otc_count;
     let total_otc_percentage = (total_otc_count as f64 / total_count as f64) * 100.0;
     println!("Percentage: {:.2}%", total_otc_percentage);
+    let laenge = unique_entries.len();
+    println!("Die Länge des Vektors ist: {}", laenge);
     println!("SSwitching to July.");
     total_otc_count = 0; total_otc_count = 0; otc_count = 0; no_otc_count = 0;
     iteration = 0;
